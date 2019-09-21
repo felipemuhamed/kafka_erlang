@@ -1,0 +1,16 @@
+{application, kafka_messenger,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {kafka_messenger_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    brod
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
