@@ -11,7 +11,6 @@
 
 start(_StartType, _StartArgs) ->
     {ok, Pid} = kafka_messenger_sup:start_link(),
-    io:fwrite("Hello World 1\n"),
     {KafkaBootstrapEndpoints, Topic, Partition} = setKafkaConfig(),
     ok = set_kafka_producer(KafkaBootstrapEndpoints, Topic, Partition),
     {ok, Pid}.
@@ -28,7 +27,7 @@ setKafkaConfig() ->
 
 set_kafka_producer(Endpoint, Topic, Partition) ->
     
-    io:fwrite("Hello World\n"),
+    io:fwrite("Initing Kafka Producer...\n"),
     ok = brod:start_client(Endpoint, client1),
     ok = brod:start_producer(client1, Topic, _ProducerConfig = []),
 
