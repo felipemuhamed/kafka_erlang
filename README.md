@@ -1,4 +1,4 @@
-kafka_messenger
+kafka_messenger_erlang
 =====
 
 A Kafka Messenger application built in top of Erlang/OTP 
